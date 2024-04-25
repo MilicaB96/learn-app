@@ -1,0 +1,28 @@
+@import "../../sass/abstracts";
+@import "../../sass/abstracts/mixins";
+@import "../../sass/components/headers";
+.join-us-container {
+    background: $neutral-100;
+    border-radius: $border-xl;
+    @include flex(row, stretch, center);
+    margin: 100px;
+    &-text {
+        width: 50%;
+        margin: auto 64px;
+    }
+    &-image {
+        width: 50%;
+        object-fit: cover;
+        border-radius: 0px 12px 12px 0px; /* border-tr-none border-br-none */
+    }
+    &-button {
+        width: 112px;
+        height: 52px;
+    }
+    &-description {
+        line-height: 28px;
+    }
+    &-title{
+        @include sub-header();
+    }
+}

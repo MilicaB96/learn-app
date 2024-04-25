@@ -1,0 +1,77 @@
+@import '../../sass/components/button';
+@import '../../sass/components/input';
+@import '../../sass/components/headers';
+@import '../../sass/components/loader';
+@import '../../sass/components/icon';
+@import '../../sass/abstracts/typography';
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/colors';
+
+.login {
+	@include flex(column);
+	margin: 10%;
+	&-title {
+		@include header-1();
+		margin-bottom: $margin-5;
+		padding: $padding-0;
+	}
+	&-message {
+		@include header-2();
+		margin-top: $margin-0;
+		padding: $padding-0;
+	}
+	&-input {
+		width: $width-355;
+		margin-bottom: $margin-10;
+        padding-left: $padding-32;
+        padding-right: $padding-32;
+	}
+	&-input-box {
+		position: relative;
+	}
+	&-icon {
+		position: absolute;
+		left: 2%;
+		top: 25%;
+	}
+	&-button {
+		margin-top: $margin-40;
+		margin-bottom: $margin-30;
+		width: $width-355;
+		height: $height-44;
+	}
+	&-or {
+		font-size: $font-size-12;
+		line-height: $line-height-20;
+		font-weight: $font-weight-700;
+		color: $neutral-550;
+	}
+	&-redirect {
+		font-size: $font-size-14;
+		line-height: $line-height-22;
+		font-weight: $font-weight-400;
+		color: $neutral-900;
+		&-bold {
+			cursor: pointer;
+			text-decoration: none !important;
+			font-weight: $font-weight-700;
+			color: $primary-500;
+		}
+	}
+    &-password{
+        &-button{
+            cursor:pointer;
+            border: none;
+            background: transparent;
+            position: absolute;
+            right: 2%;
+            top:25%;
+        }
+    }
+}
+.login-overlay-true {
+	opacity: $opacity-4;
+}
+.login-overlay-false {
+	visibility: none;
+}

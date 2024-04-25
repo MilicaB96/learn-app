@@ -1,0 +1,43 @@
+@import '../../sass/components/headers';
+@import '../../sass/abstracts/mixins';
+
+.registartion-label {
+	display: block;
+	font-size: 18px;
+	line-height: 28px;
+}
+.registration-input {
+	width: 629px;
+	padding: 10px;
+	//< 600
+	@media only screen and (max-width: 600px) {
+		width: 90vw;
+	}
+}
+.registration-box {
+	margin: auto 30px;
+	margin-bottom: 30px;
+    @media only screen and (max-width: 600px) {
+		margin: 30px auto;
+	}
+}
+
+.registration-button {
+	width: 629px;
+	height: 52px;
+	margin: auto 30px;
+	//< 600
+	@media only screen and (max-width: 600px) {
+		width: 90vw;
+		margin: 30px auto;
+	}
+}
+.registration-form-outline {
+	margin-left: 30px;
+	flex-grow: 2;
+    //< 600
+	@media only screen and (max-width: 600px) {
+		margin: auto;
+        flex-grow: 0;
+	}
+}

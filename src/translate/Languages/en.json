@@ -1,0 +1,71 @@
+{
+    "home": {
+        "title": "Let's start learning",
+        "description": "Welcome to Learn Platform - where every day is a day to learn. Dive into the vast ocean of knowledge and empower yourself with the tools for a successful tomorrow. Happy learning!",
+        "join-us": "Join us"
+    },
+    "login": {
+        "title": "Sign In",
+        "welcome": "Welcome back",
+        "username": "User name",
+        "username-placeholder": "Enter username",
+        "password": "Password",
+        "password-placeholder": "Enter password",
+        "submit-button": "Sign In",
+        "or": "OR",
+        "redirect-text": "Do you have an account?",
+        "redirect-register": "Sign up"
+    },
+    "header": {
+        "blog": "Blog",
+        "pricing": "Pricing",
+        "about-us": "About Us",
+        "sign-in": "Sign in",
+        "join-us": "Join us"
+    },
+    "footer": {
+        "product": "Product",
+        "features": "Features",
+        "pricing": "Pricing",
+        "resources": "Resources",
+        "blog": "Blog",
+        "webinars": "Webinars",
+        "about-us": "About Us",
+        "company": "Company",
+        "contacts-us": "Contacts us",
+        "subscribe-1": "Subscribe to our newsletter",
+        "subscribe-2": "For our products and exclusive rights",
+        "email-placeholder": "Input your email",
+        "subscribe": "Subscribe",
+        "privacy": "Learn, Inc. Privacy Terms",
+        "copyright": "&#169;"
+    },
+    "joinus": {
+        "joinus": "Join us",
+        "register as trainer": "Register as Trainer",
+        "register as student": "Register as Student"
+    },
+    "registration": {
+        "registration": "registration",
+        "first-name": "First name",
+        "last-name": "Last name",
+        "email": "Email",
+        "password": "Password",
+        "username": "Username",
+        "specialization": "Specialization",
+        "dob": "Date of Birth",
+        "address": "Address",
+        "optional": "(optional)",
+        "submit-button": "Submit",
+        "placeholder": {
+            "first-name": "Enter first name",
+            "last-name": "Enter last name",
+            "email": "Enter email",
+            "specialization": "Enter specialization",
+            "dob": "Enter date of birth",
+            "address": "Enter address"
+        },
+        "verification-text": "Cangratulations, you have successfully registered with Learn Platform! Here is your credentials that you can change in your account",
+        "my-account": "My account"
+    }
+}

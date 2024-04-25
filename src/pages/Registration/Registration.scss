@@ -1,0 +1,26 @@
+@import '../../sass/abstracts/mixins';
+@import '../../sass/components/loader';
+
+.registration {
+	margin: 130px;
+	@include flex(row, stretch, space-evenly);
+	@media only screen and (max-width: 600px) {
+		@include flex(column, center, space-evenly);
+        margin: auto;
+	}
+	&-image {
+		width: 451px;
+		height: 625px;
+		border-radius: $border-xl;
+        @media only screen and (max-width: 600px) {
+           width: 100vw;
+        }
+	}
+}
+
+.registration-overlay-true {
+	opacity: $opacity-4;
+}
+.registration-overlay-false {
+	visibility: none;
+}

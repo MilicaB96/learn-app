@@ -1,0 +1,9 @@
+@import '../../sass/components/header';
+@import '../../sass/components/button';
+@import '../../sass/components/logo';
+
+.selected{
+    font-weight: $font-weight-700; 
+    color: $primary-500;
+    background: transparent;
+}

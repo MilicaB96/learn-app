@@ -1,0 +1,214 @@
+@import '../abstracts/mixins';
+@import '../abstracts/colors';
+@import '../abstracts/typography';
+@import '../components/headers';
+
+.footer {
+	background: $neutral-100;
+	width: 100%;
+	&-grid {
+		display: grid;
+		grid-template-columns: 1fr 1.5fr 1.5fr;
+		grid-template-rows: 4fr 1fr 1fr;
+
+		//< 600
+		@media only screen and (max-width: 600px) {
+			@include flex(column);
+		}
+	}
+	&-logo {
+		text-decoration: none;
+
+		// < 600
+		@media only screen and (max-width: 600px) {
+			display: none;
+		}
+	}
+	&-header {
+		@include header-2($neutral-900);
+		font-weight: $font-weight-700;
+		&-subscribe {
+			@include header-2($primary-500);
+			font-weight: $font-weight-700;
+		}
+	}
+	&-list {
+		&-item {
+			display: block;
+			@include text();
+			text-align: justify;
+			margin-bottom: 5px;
+
+			// < 600
+			@media only screen and (max-width: 600px) {
+				text-align: center;
+			}
+		}
+	}
+	//subscription box
+	&-input-box {
+		display: inline-block;
+		position: relative;
+	}
+	//subscription input
+	&-input {
+		display: inline-block;
+		height: $height-36;
+		padding-left: $padding-32;
+		padding-right: $padding-16;
+		@include text();
+		background: transparent;
+		border-radius: $border-tl-m $border-bl-m $border-bl-m $border-tl-m;
+		border-width: $border-width-1;
+		border-color: $neutral-500;
+		outline: none;
+		&:hover {
+			color: $neutral-400;
+			border-color: $neutral-550;
+		}
+		&:focus {
+			color: $neutral-400;
+			border-color: $neutral-500;
+		}
+		&:disabled {
+			fill: $neutral-900;
+		}
+	}
+	//subscription form
+	&-form {
+		position: absolute;
+		text-wrap: nowrap;
+	}
+	//subscription button
+	&-button,
+	&-button:hover,
+	&-button:focus {
+		display: inline-block !important;
+		padding: 0 12px;
+		height: 36px;
+		border: none;
+		border-radius: 0 6px 6px 0px !important;
+	}
+	&-input-icon {
+		display: inline;
+		position: absolute;
+		left: 12px;
+		top: 12px;
+		width: 16px;
+		height: 16px;
+		fill: $neutral-900;
+	}
+	//hr
+	&-hr {
+		display: block;
+		grid-column: 1 / -1;
+		width: 80%;
+		border: none;
+		border-bottom: $border-width-1 $neutral-300 solid;
+
+		// < 600
+		@media only screen and (max-width: 600px) {
+			display: none;
+		}
+	}
+	//under hr
+	&-bottom-item {
+		margin: 10px 0;
+		@include text();
+	}
+
+	//media icon
+	&-media-icon {
+		width: 24px;
+		height: 24px;
+		fill: $primary-500;
+		margin: 0 10px;
+	}
+}
+//language selector
+#language {
+	@include text();
+	width: 128px;
+	height: 36px;
+	background: $neutral-250;
+	border-radius: $border-m;
+	border-width: $border-width-0;
+	outline: none;
+	&:hover {
+		color: $neutral-900;
+		background: $neutral-250;
+	}
+	&:focus {
+		color: $neutral-900;
+		background: $neutral-250;
+	}
+	&:disabled {
+		color: $neutral-900;
+		background: $neutral-250;
+		fill: $neutral-900;
+	}
+}
+
+//grid-layout
+.item-a,
+.item-d {
+	align-self: center;
+	justify-self: center;
+	margin-left: 30%;
+
+	// < 600
+	@media only screen and (max-width: 600px) {
+		margin: 30px auto;
+	}
+}
+.item-a {
+	margin-bottom: 40px;
+
+	// < 600
+	@media only screen and (max-width: 600px) {
+		display: none;
+	}
+}
+.item-b {
+	align-self: center;
+	display: flex;
+	flex-direction: row;
+	& > * {
+		padding: 0 20px;
+	}
+
+	// < 600
+	@media only screen and (max-width: 600px) {
+		@include flex(column);
+		& > * {
+			padding: auto;
+		}
+	}
+}
+.item-c {
+	align-self: center;
+	justify-self: start;
+	margin-bottom: 25px;
+
+	// < 600
+	@media only screen and (max-width: 600px) {
+		display: block;
+		margin-bottom: 60px;
+		order: 5;
+	}
+}
+.item-e {
+	align-self: center;
+	justify-self: center;
+	margin-left: 15%;
+
+	// < 600
+	@media only screen and (max-width: 600px) {
+		margin: auto;
+		order: 6;
+	}
+}
+.item-f {
+	align-self: center;
+	justify-self: center;
+}

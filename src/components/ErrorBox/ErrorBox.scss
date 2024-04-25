@@ -1,0 +1,18 @@
+@import '../../sass/abstracts/colors';
+@import '../../sass/abstracts/mixins';
+@import '../../sass/components/headers';
+
+.error-icon{
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    margin: auto 5px;
+    fill: $danger-600;
+}
+.error-text{
+    @include text($danger-600);
+    display: inline-block;
+}
+.error-box{
+    @include flex();
+}

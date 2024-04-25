@@ -1,0 +1,45 @@
+@import "../abstracts/mixins";
+@import "../abstracts/colors";
+//button-prime-start
+.button-prime {
+    @include button($primary-500);
+}
+.button-prime:hover {
+    cursor:pointer;
+    @include button($primary-550);
+}
+.button-prime:hover:active {
+    @include button($primary-600);
+}
+.button-prime:disabled {
+    opacity: $opacity-4;
+}
+//button-prime-end
+//button-secondary-start
+.button-secondary {
+    @include button($tertiary3-500);
+}
+.button-secondary:hover {
+    @include button($tertiary3-600);
+}
+.button-secondary:hover:active {
+    @include button($tertiary3-650);
+}
+.button-secondary:disabled {
+    opacity: $opacity-4;
+}
+//button-secondary-end
+//button-important-start
+.button-important {
+    @include button($danger-500);
+}
+.button-important:hover {
+    @include button($danger-600);
+}
+.button-important:hover:active {
+    @include button($danger-650);
+}
+.button-important:disabled {
+    opacity: $opacity-4;
+}
+//button-important-end

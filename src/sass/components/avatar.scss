@@ -1,0 +1,55 @@
+@import '../abstracts/colors';
+
+.avatar {
+    background: $primary-500;
+    opacity: 1; 
+    overflow: hidden; 
+    border-radius: 83px; 
+  }
+  .avatar .icon {
+    width: 165px; 
+    height: 165px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: $white;
+  }
+  .avatar .icon svg {
+    width: 82px; 
+    height: 82px; 
+  }
+  .avatar .badge {
+    width: 41px; 
+    height: 41px; 
+    border-radius: 20.5px; 
+  }
+  .avatar.active .badge {
+    background: transparent;
+    opacity: 0; 
+    border-width: 1.5px; 
+    border-color: $white
+  }
+  .avatar.inactive .badge {
+    background: transparent;
+    opacity: 0; 
+    border-width: 1.5px; 
+    border-color: $white; 
+  }
+  .avatar.idle .badge {
+    background: transparent;
+    opacity: 0; 
+    border-width: 1.5px; 
+    border-color: $white; 
+  }
+  .avatar.do_not_disturb .badge {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 41px; 
+    line-height: 41px; 
+    color: $white;
+    background: transparent;
+    opacity: 0; 
+    border-width: 1.5px; 
+    border-color: $white; 
+  }
