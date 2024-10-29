@@ -36,6 +36,14 @@
 	text-overflow: clip;
 }
 
+@mixin header-3($color:$neutral-900){
+	font-family: $font-Montserrat;
+	font-size: 24px; 
+	line-height: 36px; 
+	font-weight: 700; 
+	color: $color;
+}
+
 @mixin text($color: $neutral-900) {
 	text-decoration: none;
 	font-size: $font-size-14;
@@ -50,4 +58,12 @@
 	line-height: $line-height-26;
 	font-weight: $font-weight-400;
 	color: $neutral-600;
+}
+
+@mixin text-3(){
+	text-decoration: none;
+	font-size: $font-size-18;
+	line-height: $line-height-28;
+	font-weight: $font-weight-400;
+	color: $neutral-500;
 }

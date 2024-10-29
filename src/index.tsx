@@ -1,13 +1,13 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 
 import reportWebVitals from './reportWebVitals';
-import Login from './pages/Login/Login';
-
 import './style.scss';
-import { Provider } from 'react-redux';
+
 import store from './store';
+import Login from './pages/Login/Login';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import JoinUs from './pages/JoinUs/JoinUs';
@@ -15,6 +15,11 @@ import Registration from './pages/Registration/Registration';
 import Home from './pages/Home/Home';
 import Verification from './pages/Registration/Verification';
 import PublicRoute from './routers/PublicRoute';
+import PrivateRoute from './routers/PrivateRoute';
+import MyAccount from './pages/MyAccount/MyAccount';
+import ChangePassword from './pages/ChangePassword/ChangePassword';
+import AddTrainers from './components/AddTrainers/AddTrainers';
+import EditProfile from './pages/EditProfile/EditProfile';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -42,20 +47,31 @@ root.render(
 							</PublicRoute>
 						}
 					/>
+					<Route path='/registration' element={<Registration />} />
+					<Route path='/registration-verification' element={<Verification />} />
 					<Route
-						path='/registration'
+						path='/my-account'
 						element={
-							<PublicRoute>
-								<Registration />
-							</PublicRoute>
+							<PrivateRoute>
+								<MyAccount />
+							</PrivateRoute>
+						}
+					/>
+					<Route path='/change-password' element={<ChangePassword />} />
+					<Route
+						path='/add-trainers'
+						element={
+							<PrivateRoute>
+								<AddTrainers />
+							</PrivateRoute>
 						}
 					/>
 					<Route
-						path='/registration-verification'
+						path='/edit-profile'
 						element={
-							<PublicRoute>
-								<Verification />
-							</PublicRoute>
+							<PrivateRoute>
+								<EditProfile />
+							</PrivateRoute>
 						}
 					/>
 				</Routes>

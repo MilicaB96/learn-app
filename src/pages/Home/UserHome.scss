@@ -1,0 +1,43 @@
+@import "../../sass/components/headers";
+@import "../../sass/abstracts/typography";
+@import "../../sass/abstracts/mixins";
+
+.home {
+    margin: 150px 30px;
+    &-title {
+        @include header-main();
+    }
+    &-greeting{
+        margin: 20vh auto;
+    }
+    &-message {
+        @include header-2($neutral-500);
+        font-family: $font-Poppins;
+        margin: auto 20vw;
+        text-wrap: wrap;
+    }
+    &-new {
+        @include sub-header();
+        text-align: center;
+        &-description {
+            @include text-3();
+            text-align: center;
+            margin: auto 20vw;
+        }
+    }
+    &-box-container {
+        margin: 5vw;
+        @include flex(row, center, space-evenly);
+        @media only screen and (max-width: 1350px) {
+            @include flex(column,center, space-between);
+            & > *{
+                margin: 10px;
+            }
+        }
+    }
+    &-button{
+        text-align: center;
+        margin: auto;
+        height: 44px;
+    }
+}

@@ -8,6 +8,7 @@ export type UserType = {
 	email: string;
 	photo?: string;
 	password?: string;
+	generatedPassword?: string;
 	isActive?: boolean;
 	role: string;
 	dateOfBirth?: string;
@@ -16,4 +17,9 @@ export type UserType = {
 	errors: ?any;
 	pending?: boolean;
 	isAuth?: boolean;
+	flag: boolean;
+	specializations: any;
+	myTrainers: any;
+	myStudents: any;
+	allTrainers: any;
 };

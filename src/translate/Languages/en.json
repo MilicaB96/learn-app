@@ -4,6 +4,12 @@
         "description": "Welcome to Learn Platform - where every day is a day to learn. Dive into the vast ocean of knowledge and empower yourself with the tools for a successful tomorrow. Happy learning!",
         "join-us": "Join us"
     },
+    "userHome": {
+        "greeting": "Hi",
+        "message": "Welcome to Learn Platform - where every day is a day to learn. Dive into the vast ocean of knowledge and empower youself with the tools for a successful tomorrow. Happy learning!",
+        "whatsnew": "What's new?",
+        "readmore": "Read more articles"
+    },
     "login": {
         "title": "Sign In",
         "welcome": "Welcome back",
@@ -21,6 +27,7 @@
         "pricing": "Pricing",
         "about-us": "About Us",
         "sign-in": "Sign in",
+        "sign-out": "Sign out",
         "join-us": "Join us"
     },
     "footer": {
@@ -67,5 +74,98 @@
         },
         "verification-text": "Cangratulations, you have successfully registered with Learn Platform! Here is your credentials that you can change in your account",
         "my-account": "My account"
+    },
+    "user-card": {
+        "myaccount": "My account",
+        "sign-out": "Sign out"
+    },
+    "my-profile": {
+        "title": "My Profile",
+        "status": "Status",
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "username": "Username",
+        "specialization": "Specialization",
+        "dob": "Date of Birth",
+        "address": "Address",
+        "email": "Email",
+        "active": "Active",
+        "not-active": "Not Active",
+        "editprofile": "Edit Profile",
+        "changePassword": "Change Password"
+    },
+    "my-trainers": {
+        "title": "My Trainers",
+        "button": "Add Trainers",
+        "name": "name",
+        "specialization": "specialization"
+    },
+    "my-trainings": {
+        "title": "My Trainings",
+        "button": "View trainings"
+    },
+    "my-account": {
+        "button": "Delete account",
+        "cancel": "Cancel",
+        "delete": "Confirm"
+    },
+    "my-students": {
+        "title": "My Students",
+        "name": "name",
+        "status": "status"
+    },
+    "status": {
+        "active": "ACTIVE",
+        "not-active": "NOT ACTIVE"
+    },
+    "change-password": {
+        "title": "Security",
+        "change-password": "Change Password",
+        "current-password": "Current password",
+        "new-password": "New password",
+        "confirm-new-password": "Confirm new password",
+        "current-password-placeholder": "Enter current password",
+        "new-password-placeholder": "Enter new password",
+        "confirm-new-password-placeholder": "Confirm new password",
+        "cancel": "Cancel"
+    },
+    "change-password-confirmation": {
+        "title": "Password Changed",
+        "description": "Please proceed to sign in with the new password",
+        "sign-in": "Sign in"
+    },
+    "add-trainer": {
+        "add-trainer": "Add Trainer",
+        "add-trainers": "Add Trainers",
+        "my-trainers": "My Trainers",
+        "description": "Please select trainers for adding the into your tainers list",
+        "warning": "*-There is not a possibility to remove the trainer"
+    },
+    "all-trainers": {
+        "all-trainers": "All Trainers",
+        "name": "name",
+        "specialization": "specialization",
+        "add": "Add"
+    },
+    "edit-profile": {
+        "title": "My Account",
+        "edit-profile": "Edit profile",
+        "cancel": "Cancel",
+        "save": "Save Changes",
+        "first-name": "First name",
+        "last-name": "Last name",
+        "email": "Email",
+        "password": "Password",
+        "username": "Username",
+        "specialization": "Specialization",
+        "dob": "Date of Birth",
+        "address": "Address",
+        "active": "Active"
+    },
+    "delete-profile": {
+        "title": "Profile Deletion Confirmation",
+        "description": "We're truly to see you go",
+        "cancel": "Cancel",
+        "confirm": "Confirm"
     }
 }

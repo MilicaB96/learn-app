@@ -1,0 +1,66 @@
+@import '../../sass/abstracts/colors';
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins.scss';
+@import '../../sass/components/headers.scss';
+
+.myprofile-avatar {
+	&-outline {
+		background: $primary-500;
+		opacity: 1;
+		overflow: hidden;
+		display: inline-block;
+		width: 160px;
+		height: 160px;
+		overflow: hidden;
+		border-radius: $border-l;
+	}
+	width: 100px;
+	height: 100px;
+	margin-top: 15%;
+	margin-left: 15%;
+}
+.myprofile-check {
+	display: inline-block;
+	color: $tertiary3-500;
+	margin: 1px 5px -5px 1px;
+}
+.myprofile-tag {
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 700;
+}
+.myprofile-status {
+	@include text-2();
+	&-active{
+		color: $tertiary3-500;
+	}
+	&-active{
+		color: $tertiary3-500;
+	}
+	&-not-active{
+		color: $danger-600;
+	}
+}
+.myprofile-info {
+	@include text-2();
+	color: $neutral-900;
+}
+
+.myprofile-card {
+	display: flex;
+	align-items: flex-start;
+	& > * {
+		margin-right: 10px;
+	}
+}
+.myprofile-button {
+	&-box {
+		display: flex;
+	}
+	height: 44px;
+	margin-right: 30px;
+}
+.myprofile-title {
+	@include header-1();
+    text-align: start;
+}

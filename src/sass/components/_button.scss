@@ -5,7 +5,7 @@
     @include button($primary-500);
 }
 .button-prime:hover {
-    cursor:pointer;
+    cursor: pointer;
     @include button($primary-550);
 }
 .button-prime:hover:active {
@@ -43,3 +43,16 @@
     opacity: $opacity-4;
 }
 //button-important-end
+
+.button-cancel {
+    @include button(transparent, $neutral-500);
+}
+.button-cancel:hover {
+    @include button($neutral-250, $neutral-500);
+}
+.button-cancel:hover:active {
+    @include button($neutral-300, $neutral-500);
+}
+.button-cancel:disabled {
+    opacity: $opacity-4;
+}

@@ -1,0 +1,15 @@
+@import '../../sass/components/headers.scss';
+
+.mytrainers-title {
+	@include header-1();
+	text-align: start;
+}
+.mytrainers-button {
+	height: 44px;
+}
+.mytrainers-header {
+	display: flex;
+    max-width: 500px;
+    justify-content: space-between;
+    align-items: baseline;
+}

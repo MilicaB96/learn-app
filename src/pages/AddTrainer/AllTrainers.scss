@@ -1,0 +1,14 @@
+@import "../../sass/components/headers.scss";
+@import "../../sass/components/button.scss";
+
+.all-trainers {
+    &-title {
+        @include header-1();
+        text-align: start;
+    }
+    &-button{
+        height: 44px;
+        margin: 10px 0;
+    }
+}
+

@@ -1,22 +1,25 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { LanguageContext } from '../../App';
 import { useSelector } from 'react-redux';
-import { selectPassword, selectUsername } from '../../store/user/selectors';
-import check from '../../assets/check.svg';
+import {
+	selectGeneratedPassword,
+	selectUsername,
+} from '../../store/user/selectors';
 import './Verification.scss';
+import Check from '../../components/Check/Check';
 
 function Verification() {
 	const lang = useContext(LanguageContext);
+	const navigate = useNavigate();
 	const username = useSelector(selectUsername);
-	const password = useSelector(selectPassword);
+	const password = useSelector(selectGeneratedPassword);
 	return (
 		<div className='registration-verification'>
 			<h1 className='registration-verification-title'>
 				{lang.registration.registration}
 			</h1>
-			<div className='registration-verification-icon-outline'>
-				<img className='registration-verification-icon' src={check} alt='' />
-			</div>
+			<Check />
 			<p className='registration-verification-description'>
 				{lang.registration['verification-text']}
 			</p>
@@ -32,7 +35,10 @@ function Verification() {
 				</p>
 				<p className='registration-verification-password'>{password}</p>
 			</div>
-			<button className='button-prime registration-verification-button'>
+			<button
+				onClick={() => navigate('/my-account')}
+				className='button-prime registration-verification-button'
+			>
 				{lang.registration['my-account']}
 			</button>
 		</div>

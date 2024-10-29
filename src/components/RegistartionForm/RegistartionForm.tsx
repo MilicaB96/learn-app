@@ -6,7 +6,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LanguageContext } from '../../App';
 import { RegistrationProps } from './RegistartionProps';
 import { UserActionTypes } from '../../store/user/types';
-import { selectIsAuth, selectErrors } from '../../store/user/selectors';
+import {
+	selectErrors,
+	selectFlag,
+	selectSpecializations,
+} from '../../store/user/selectors';
 
 import './RegistartionForm.scss';
 import ErrorBox from '../ErrorBox/ErrorBox';
@@ -14,28 +18,27 @@ import ErrorBox from '../ErrorBox/ErrorBox';
 function RegistrationForm({ role }: RegistrationProps) {
 	const [error, setError] = useState([]);
 	const [user, setUser] = useState({});
-	const [specialization, setSpecialization] = useState('mentor');
 	const lang = useContext(LanguageContext);
 	const dispatch = useDispatch();
-	const isAuth = useSelector(selectIsAuth);
-	const registerError = useSelector(selectErrors);
 	const navigate = useNavigate();
+	const registerError = useSelector(selectErrors);
+	const flag = useSelector(selectFlag);
+	const specializations = useSelector(selectSpecializations);
 
 	const handleSubmit = (e: any) => {
 		e.preventDefault();
 		setError([]);
-		setUser({ ...user, specialization: specialization });
 		dispatch({
 			type: UserActionTypes.REGISTER_USER,
 			payload: { ...user, role },
 		});
 	};
+
 	useEffect(() => {
-		if (isAuth) {
-			setUser({});
+		if (flag) {
 			navigate('/registration-verification');
 		}
-	}, [isAuth, navigate]);
+	}, [flag, navigate]);
 
 	useEffect(() => {
 		if (registerError) {
@@ -47,6 +50,11 @@ function RegistrationForm({ role }: RegistrationProps) {
 		}
 	}, [registerError]);
 
+	useEffect(() => {
+		if (role === 'trainer') {
+			dispatch({ type: UserActionTypes.GET_SPECIALIZATIONS });
+		}
+	}, [role]);
 	return (
 		<div>
 			<div className='registration-form-outline'>
@@ -217,21 +225,28 @@ function RegistrationForm({ role }: RegistrationProps) {
 							>
 								{lang.registration['specialization']}
 							</label>
-							<select
-								className={
-									error.some((item: any) => item.includes('specialization'))
-										? 'input-danger registration-input'
-										: 'input registration-input'
-								}
-								name='specialization'
-								value={specialization}
-								onChange={(e) => {
-									setSpecialization(e.target.value);
-								}}
-							>
-								<option value='mentor'>Mentor</option>
-								<option value='othervalue'>OtherValue</option>
-							</select>
+							{specializations?.length && (
+								<select
+									className={
+										error.some((item: any) => item.includes('specialization'))
+											? 'input-danger registration-input'
+											: 'input registration-input'
+									}
+									name='specialization'
+									onChange={(e) => {
+										setUser(() =>
+											setUser({ ...user, specialization: e.target.value })
+										);
+									}}
+								>
+									<option value=''>Enter a specialization</option>
+									{specializations.map((spec: any) => (
+										<option key={spec.id} value={spec.id}>
+											{spec.specialization}
+										</option>
+									))}
+								</select>
+							)}
 							{error.some((item: any) => item.includes('specialization')) &&
 								error.map((item: any, index) => {
 									if (item.includes('specialization')) {

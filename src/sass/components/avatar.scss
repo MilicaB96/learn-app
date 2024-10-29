@@ -5,18 +5,16 @@
     opacity: 1; 
     overflow: hidden; 
     border-radius: 83px; 
+    display: inline-block;
+    margin:auto 10px;
   }
   .avatar .icon {
-    width: 165px; 
-    height: 165px; 
+    width: 40px; 
+    height: 40px; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
     color: $white;
-  }
-  .avatar .icon svg {
-    width: 82px; 
-    height: 82px; 
   }
   .avatar .badge {
     width: 41px; 

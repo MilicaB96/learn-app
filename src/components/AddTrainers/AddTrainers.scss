@@ -1,0 +1,17 @@
+@import "../../sass/components/headers";
+@import "../../sass/abstracts/mixins";
+
+.addtrainers-title {
+    @include header-main();
+    text-align: center;
+}
+.addtrainers {
+    margin: 10px 100px;
+    &-description {
+        @include text-2();
+        color: $neutral-900;
+    }
+    &-tables{
+        @include flex(row, baseline, space-between);
+    }
+}

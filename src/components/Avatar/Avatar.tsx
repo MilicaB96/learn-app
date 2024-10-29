@@ -1,4 +1,5 @@
 import profile from '../../assets/profile.svg';
+import './Avatar.scss';
 
 function Avatar() {
 	return (
