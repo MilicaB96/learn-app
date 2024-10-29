@@ -1,0 +1,54 @@
+@import '../../sass/abstracts/mixins';
+@import '../../sass/components/headers';
+
+.header-dropdown{
+    overflow: hidden;
+    &-avatar{
+        cursor: pointer;
+        background: transparent;
+        border: none;
+    }
+    &-user{
+        @include flex();
+        border-bottom: 1px solid $neutral-300;
+        padding: 15px 1px;
+        &-data > *{
+            margin: auto 1px;
+        }
+    }
+    &-username{
+        @include text();
+        font-weight: 700px;
+    }
+    &-email{
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $neutral-500;
+    }
+    &-links{
+        @include flex(column, flex-start, baseline);
+    }
+    &-link{
+        text-decoration: none;
+        margin: 5px;
+        @include text($neutral-600);
+    }
+    &-button{
+        cursor: pointer;
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        text-align: left;
+        background-color: transparent;
+        border: none;
+        @include text($neutral-600);
+        border-top: 1px solid $neutral-300;
+    }
+}
+.dropdown-image{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 5px 2px 0px 2px;
+}

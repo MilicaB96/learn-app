@@ -1,0 +1,55 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/abstracts/colors";
+@import "../../sass/abstracts/mixins";
+@import "../../sass/components/headers";
+
+.box {
+    position: relative;
+    width: 376px;
+    height: 446px;
+    background: $white;
+    border-radius: $border-l;
+    box-shadow: $shadow-xs;
+    &-bottom {
+        padding-top: 250px;
+        margin: 10px 15px;
+    }
+    &-image {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 256px;
+        width: 376px;
+        object-fit: cover;
+        border-radius: 12px 12px 0px 0px;
+    }
+    &-tag {
+        @include text-2();
+        color: $primary-500;
+    }
+    &-title {
+        @include header-3();
+        margin-top: -15px;
+    }
+    &-date {
+        @include text($neutral-500);
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+    }
+    &-pill {
+        position: absolute;
+        bottom:10px;
+        right: 15px;
+        height: 28px;
+        background-color: $neutral-400;
+        border-radius: 12px;
+    }
+    &-time {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 400;
+        padding: 2px 10px;
+    }
+}

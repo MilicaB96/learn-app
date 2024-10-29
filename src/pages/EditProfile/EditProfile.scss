@@ -1,0 +1,12 @@
+@import '../../sass/abstracts/colors';
+@import '../../sass/abstracts/variables';
+@import '../../sass/components/headers';
+
+.editprofile{
+    margin: 100px auto 400px auto;
+    &-title{
+        @include header-main();
+        text-align: center;
+        margin: 80px auto;
+    }
+}

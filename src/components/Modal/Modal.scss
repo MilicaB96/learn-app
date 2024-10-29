@@ -1,0 +1,18 @@
+@import "../../sass/components/button";
+
+.modal-buttons {
+    float: right;
+    & > * {
+        margin-left: 10px;
+    }
+    margin-top: 20px;
+}
+.modal-button {
+    display: inline-block !important;
+}
+.modal-remove-button {
+    float: right;
+    cursor: pointer;
+    border: none;
+    background: none;
+}

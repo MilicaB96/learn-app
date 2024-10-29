@@ -1,0 +1,9 @@
+@import '../../sass/components/headers';
+
+.join-us{
+    // margin: 50px 0 50px 50px;
+    &-title{
+        @include header-main();
+        text-align: center;
+    }
+}

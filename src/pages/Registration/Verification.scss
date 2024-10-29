@@ -1,0 +1,31 @@
+@import '../../sass/abstracts/colors';
+@import '../../sass/components/button';
+@import '../../sass/components/headers';
+
+.registration-verification {
+	@include flex(column);
+	text-align: center;
+	margin: 25px 100px 100px 100px;
+	&-title {
+		text-transform: capitalize;
+		@include sub-header();
+	}
+	&-description {
+		padding: 0 20vw;
+	}
+	&-button {
+		height: 52px;
+		margin-top: 20px;
+	}
+	&-username,
+	&-password {
+		@include text-2();
+		color: $neutral-900;
+	}
+	&-username-text,
+	&-password-text {
+		@include text-2();
+		font-weight: $font-weight-700;
+		color: $neutral-900;
+	}
+}

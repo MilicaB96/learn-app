@@ -1,0 +1,87 @@
+@import "../../sass/components/headers";
+@import "../../sass/abstracts/variables";
+@import "../../sass/abstracts/mixins";
+
+.home {
+    &-title {
+        @include header-main();
+        text-align: center;
+    }
+    &-description {
+        @include header-2($neutral-500);
+        margin: auto 10vw;
+        text-align: center;
+        text-wrap: wrap;
+    }
+    &-video {
+        width: 957px;
+        height: 540px;
+        background: $neutral-900;
+        border-radius: 0px;
+        margin: 100px auto;
+        &-outline {
+            margin: auto;
+            text-align: center;
+        }
+    }
+}
+.join-us {
+    &-container {
+        position: relative;
+        width: 1176px;
+        height: 384px;
+        background: $neutral-100;
+        border-radius: $border-m;
+        text-align: center;
+        margin: 110px auto;
+        overflow: hidden;
+    }
+    &-title{
+        @include sub-header();
+        color: $primary-500;
+    }
+    &-text{
+        margin: auto 333px;
+    }
+    &-button{
+        display: inline-block !important;
+        height: 52px;
+        margin: 20px;
+    }
+    &-link{
+        text-decoration: none;
+    }
+    &-oval {
+        position: absolute;
+        top: 171px;
+        left: -73px;
+        width: 295px;
+        height: 295px;
+        background: $primary-400;
+        border-radius: 50%;
+    }
+    &-dots-left {
+        position: absolute;
+        top: -160px;
+        left: 165px;
+        width: 177px;
+        height: 264px;
+        border-radius: 0px;
+    }
+    &-dots-right {
+        position: absolute;
+        top: 278px;
+        left: 1108px;
+        width: 177px;
+        height: 264px;
+        border-radius: 0px;
+    }
+    &-circle {
+        position: absolute;
+        top: -189px;
+        left: 1058px;
+        width: 383px;
+        height: 383px;
+        border-radius: 0px;
+    }
+}

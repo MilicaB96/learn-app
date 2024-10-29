@@ -1,0 +1,6 @@
+@import '../../sass/components/headers.scss';
+
+.mystudents-title {
+	@include header-1();
+	text-align: start;
+}

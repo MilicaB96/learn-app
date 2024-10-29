@@ -1,0 +1,55 @@
+@import '../abstracts/mixins';
+@import '../abstracts/colors';
+
+//default
+.input {
+	@include input($neutral-150, $neutral-500);
+}
+.input:hover {
+	@include input($neutral-150, $neutral-550);
+}
+.input:focus {
+	@include input($white, $primary-500);
+}
+.input:disabled {
+	@include input($neutral-150, $neutral-500);
+	fill: $neutral-500;
+}
+.label {
+	@include label();
+}
+
+//danger
+.input-danger {
+	@include input($white, $danger-500, $danger-500);
+}
+.input-danger:hover {
+	@include input($white, $danger-600, $tertiary1-500);
+}
+.input-danger:focus {
+	@include input($white, $danger-500, $tertiary1-500);
+}
+.input-danger:disabled {
+	fill: $tertiary1-500;
+	@include input($white, $danger-500, $tertiary1-500);
+}
+.label-danger {
+	@include label($danger-500);
+}
+//valid
+.input-valid {
+	@include input($white, $tertiary3-500, $tertiary3-500);
+}
+.input-valid:hover {
+	@include input($white, $tertiary3-600, $tertiary3-600);
+}
+.input-valid:focus {
+	@include input($white, $tertiary3-600, $tertiary3-500);
+}
+.input-valid:disabled {
+	fill: $tertiary3-600;
+	@include input($white, $tertiary3-600, $tertiary3-500);
+}
+.label-valid {
+	@include label($tertiary3-500);
+}

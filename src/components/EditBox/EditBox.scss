@@ -1,0 +1,94 @@
+@import '../../sass/components/headers';
+@import '../../sass/abstracts/mixins';
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/colors';
+@import '../../sass/components/button';
+
+.edit-profile{
+	&-subtitle{
+		@include header-1();
+		text-align: justify;
+		margin-left: 30px;
+	}
+	
+    &-cancel{
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        color: $neutral-500;
+        background-color: transparent;
+        border-radius: $border-m;
+        height: 44px;
+        border: none;
+        &:hover{
+            color: $neutral-500;
+            background: $neutral-250;
+        }
+    }
+    &-button, &-button:hover{
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 10px;
+    }
+    &-buttons{
+        margin: 100px auto;
+        text-align: center;
+    }
+}
+
+.edit-profile-label {
+	display: block;
+	font-size: 18px;
+	line-height: 28px;
+}
+.edit-profile-input {
+	width: 629px;
+	padding: 10px;
+	//< 600
+	@media only screen and (max-width: 600px) {
+		width: 90vw;
+	}
+}
+.edit-profile-box {
+	margin: auto 30px;
+	margin-bottom: 30px;
+    @media only screen and (max-width: 600px) {
+		margin: 30px auto;
+	}
+}
+.edit-profile-form-outline {
+	margin-left: 30px;
+	flex-grow: 2;
+    //< 600
+	@media only screen and (max-width: 600px) {
+		margin: auto;
+        flex-grow: 0;
+	}
+}
+.edit-profile-form{
+	width: 50vw;
+	background:$white;
+	border-radius: $border-m;
+	border: solid 1px $neutral-300;
+	box-shadow: $shadow-xs;
+	padding: 50px 5px;
+	@media only screen and (max-width: 600px) {
+		width: 100vw;
+		margin: auto;
+        flex-grow: 0;
+	}
+}
+
+.edit-profile-container{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+
+.switch-label{
+	display: inline-block;
+	margin-right: 10px;
+}
+.student-invisible{
+	visibility: hidden;
+}

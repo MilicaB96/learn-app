@@ -1,0 +1,24 @@
+.myaccount-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 100px auto;
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.myaccount-bottom {
+    margin: 100px auto;
+}
+.myaccount-button-delete {
+    height: 44px;
+    float: right;
+    margin-top: -145px;
+    margin-right: 5vw;
+    @media only screen and (max-width: 600px) {
+        margin: auto;
+        text-align: center;
+        float: none;
+    }
+}

@@ -1,0 +1,9 @@
+@import '../abstracts/variables';
+@import '../abstracts/colors';
+
+.icon {
+    display: inline;
+	width: $width-20;
+	height: $height-20;
+	fill: $neutral-900;
+}

@@ -1,0 +1,52 @@
+@import '../../sass/components/header';
+@import '../../sass/components/button';
+@import '../../sass/components/logo';
+@import '../../sass/abstracts/variables';
+
+.selected {
+	font-weight: $font-weight-700;
+	color: $primary-500;
+	background: transparent;
+}
+.button-avatar {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+}
+.header-user {
+	position: absolute;
+	top: 15px;
+	right: 5px;
+	@include flex();
+	padding-right: $padding-16;
+	// < 600
+	@media only screen and (max-width: 600px) {
+		display: none;
+	}
+}
+.header-hidden{
+    display: none;
+}
+.header-dropdown{
+	position: absolute; 
+	top: 22px; 
+	right: 22px; 
+	width: 256px; 
+	height: 367px; 
+	background: $white;
+	border-radius:$border-m;
+	box-shadow: $shadow-m;
+}
+.cross{
+	position: absolute;
+	top:0;
+}
+.header-dropdown-user{
+	margin-left: 20px;
+	border: none;;
+}
+.dropdown-hidden{
+	@media only screen and (min-width: 601px) {
+		display: none;
+	}
+}

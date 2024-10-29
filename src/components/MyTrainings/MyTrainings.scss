@@ -1,0 +1,16 @@
+@import "../../sass/components/headers.scss";
+
+.mytrainings-title{
+    @include header-main();
+    text-align: center;
+}
+.mytrainings-description{
+    @include text-2();
+	color: $neutral-900;
+    text-align: center;
+    margin: 100px 250px;
+}
+.mytrainings-button{
+    height: 44px;
+    margin: auto;
+}
